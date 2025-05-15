@@ -1,66 +1,126 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Perfecto, mi señor. Aquí tienes una versión revisada y mejorada del contenido en **formato Markdown puro**, lista para copiar directamente en tu `README.md`. He reorganizado el contenido para claridad, añadido una sección de instalación paso a paso y mejorado el estilo general para mayor profesionalismo:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+# Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Laravel Logo](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![Build Status](https://github.com/laravel/framework/workflows/tests/badge.svg)](https://github.com/laravel/framework/actions)
+[![Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/framework)
+[![Latest Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/framework)
+[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/framework)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🧰 Acerca del proyecto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Este proyecto está desarrollado con el framework **Laravel**, el cual proporciona una base sólida y moderna para el desarrollo de aplicaciones web con una sintaxis elegante y expresiva.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Laravel facilita tareas comunes como:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Enrutamiento rápido y simple
+* Contenedor de inyección de dependencias
+* Múltiples drivers para sesión y caché
+* ORM Eloquent
+* Migraciones agnósticas de base de datos
+* Procesamiento de tareas en segundo plano
+* Difusión de eventos en tiempo real
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Instalación y configuración
 
-### Premium Partners
+Sigue los pasos a continuación para instalar y ejecutar el proyecto en tu entorno local:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. Clona el repositorio
 
-## Contributing
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd <nombre-del-proyecto>
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Configura el entorno
 
-## Code of Conduct
+Copia el archivo de ejemplo `.env` y edítalo con la configuración adecuada de base de datos y entorno:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+cp .env.example .env
+```
 
-## Security Vulnerabilities
+### 3. Instala Composer (si no está instalado)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+curl -sS https://getcomposer.org/installer | php
+php composer.phar -V
+```
 
-## License
+### 4. Instala dependencias del proyecto
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+```
+
+> Si hay problemas con extensiones como `ext-oci8`, puedes usar:
+
+```bash
+composer install --ignore-platform-req=ext-oci8
+```
+
+### 5. Genera la clave de la aplicación
+
+```bash
+php artisan key:generate
+```
+
+### 6. Ejecuta migraciones (si aplica)
+
+```bash
+php artisan migrate
+```
+
+### 7. Verifica rutas específicas (opcional)
+
+```bash
+php artisan route:list | grep updateData
+```
+
+---
+
+## 📚 Recursos para aprender Laravel
+
+Laravel cuenta con una de las documentaciones más completas entre los frameworks modernos. Algunos recursos recomendados:
+
+* [Documentación oficial](https://laravel.com/docs)
+* [Laravel Bootcamp](https://bootcamp.laravel.com)
+* [Laracasts](https://laracasts.com) – Más de 2000 videos sobre Laravel, PHP moderno, pruebas y más
+
+---
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Consulta la guía en:
+[https://laravel.com/docs/contributions](https://laravel.com/docs/contributions)
+
+---
+
+## 🧭 Código de conducta
+
+Por favor, respeta el [código de conducta de la comunidad](https://laravel.com/docs/contributions#code-of-conduct).
+
+---
+
+## 🔐 Reportar vulnerabilidades
+
+Si detectas una vulnerabilidad, por favor contacta a Taylor Otwell vía correo:
+[taylor@laravel.com](mailto:taylor@laravel.com)
+
+---
+
+## 📝 Licencia
+
+El framework Laravel está licenciado bajo la [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+¿Deseas incluir una sección de despliegue en producción, testing, endpoints de API o instrucciones para Docker?
