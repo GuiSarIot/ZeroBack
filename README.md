@@ -1,7 +1,3 @@
-Perfecto, mi señor. Aquí tienes una versión revisada y mejorada del contenido en **formato Markdown puro**, lista para copiar directamente en tu `README.md`. He reorganizado el contenido para claridad, añadido una sección de instalación paso a paso y mejorado el estilo general para mayor profesionalismo:
-
----
-
 # Laravel
 
 ![Laravel Logo](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
@@ -123,4 +119,28 @@ El framework Laravel está licenciado bajo la [MIT License](https://opensource.o
 
 ---
 
-¿Deseas incluir una sección de despliegue en producción, testing, endpoints de API o instrucciones para Docker?
+## 📝 Comandos
+
+---
+```bash
+
+php artisan tinker
+DB::connection()->getDatabaseName();
+
+php artisan migrate:fresh
+php artisan migrate --seed
+
+php artisan migrate --path=/database/migrations/nombre_de_la_migracion.php
+php artisan migrate:fresh
+php artisan migrate:rollback
+php artisan migrate --seed
+php artisan tinker
+php artisan migrate:status
+php artisan vendor:publish --tag=reliese-models
+
+php artisan make:migration
+php artisan migrate
+```
+
+
+
