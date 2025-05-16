@@ -137,6 +137,7 @@ php artisan migrate --seed
 php artisan tinker
 php artisan migrate:status
 php artisan vendor:publish --tag=reliese-models
+php artisan crearServicio gestion_prueba/testService 
 
 php artisan make:migration
 php artisan migrate
